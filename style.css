@@ -4,9 +4,11 @@
     --background-color: #ecf0f1;
     --expense-color: #e74c3c;
 }
+
 *{
     box-sizing:border-box;
 }
+
 body{
     background-color:var (--bg-color);
     font-family:'Courier New', Courier, monospace;
@@ -16,6 +18,7 @@ body{
     min-height: 100vh;
     margin:0;
 }
+
 .container{
     width:380px;
     background:#fff;
@@ -23,6 +26,7 @@ body{
     border-radius:20px;
     box-shadow:0 10px 15px rgba(0,0,0,0.1);
 }
+
 .balance-card{
     background: var(--primary-color);
     color:white;
@@ -31,6 +35,7 @@ body{
     text-align:center;
     margin-bottom:20px;
 }
+
 .inc-exp-container{
     display:flex;
     justify-content:space-between;
@@ -40,15 +45,19 @@ body{
     box-shadow:0 5px 10px rgba(0,0,0,0.1);
     margin-bottom:20px;
 }
+
 .inc-exp-container > div{
     flex:1;
     text-align:center;
 }
+
 .money{
     font-size:1rem;
     text-align:center;
 }
+
 .money.plus{color:var(--income-color);}
+
 .money.minus{color:var(--expense-color);}
 
 h3{
@@ -56,6 +65,7 @@ h3{
     padding-bottom:10px;
     margin:30px0 10px;
 }
+
 .list{
     list-style-type:none;
     padding:0;
@@ -63,6 +73,7 @@ h3{
     max-height:150px;
     overflow-y:auto;
 }
+
 .list li{
     background-color:#fff;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
@@ -73,12 +84,15 @@ h3{
     margin:10px 0;
     border-radius:8px;
 }
+
 .list li.plus{
     border-right:5px solid var(--income-color);
 }
+
 .list li.minus{
     border-right:5px solid var(--expense-color);
 }
+
 input[type="text"], input[type="number"]{
     width:100%;
     padding:12px;
@@ -86,6 +100,7 @@ input[type="text"], input[type="number"]{
     border:1px solid #dedede;
     border-radius:8px;
 }
+
 .btn{
     cursor:pointer;
     background-color:var(--primary-color);
@@ -99,6 +114,44 @@ input[type="text"], input[type="number"]{
     border-radius:8px;
     transition:transform 0.2s ease;
 }
+
 .btn-active{
     transform:scale(0.98);
+}
+
+.inc-exp-container {
+    background-color:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,0,12), 0 1px 2px rgba(0,0,0,0,24);
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    margin:20px;
+    text-align:center;
+}
+
+.inc-exp-container > div{
+    flex:1;
+}
+
+.inc-exp-container > div:first-of-type{
+    border-right:1px solid #dedede;
+}
+
+h4{
+    margin:0;
+    text-transform:uppercase;
+}
+
+.money{
+    font-size:20px;
+    letter-spacing:1px;
+    margin:5px 0;
+}
+
+.money-plus{
+    color:#2ecc71;
+}
+
+.money-minus{
+    color:#c0392b;
 }

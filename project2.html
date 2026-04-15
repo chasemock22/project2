@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-<link rel="stylesheet" href="style.css" />
-<script src="https://kit.fontawesome.com/996973c893.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap" rel="stylesheet" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
+        rel="stylesheet" />
+    <title>Royal Bank of Canada</title>
 </head>
+
 <body>
     <div class="container">
-       <header>
-        <h2>My Wallet</h2>
-        <div class="balance-card">
-            <p>Total Balance</p>
-            <h1 id="balance">$495.00</h1>
-        </div>
-       </header>
-       <div class="inc-exp-container">
-        <div>
-            <h4>Income</h4>
-            <p id="money-plus" class="money plus">$500.00</p>
+        <header>
+            <h2>My Wallet</h2>
+            <div class="balance-card">
+                <p>Total Balance</p>
+                <h1 id="balance">$495.00</h1>
+            </div>
+        </header>
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">$500.00</p>
             </div>
         </div>
         <h3>History</h3>
@@ -39,6 +43,28 @@
             </div>
             <button class="btn">Add Transaction</button>
         </form>
-    </div> 
+    </div>
+    <div class="inc-exp-container">
+        <div>
+            <h4>Income</h4>
+            <p id="money-plus" class="money plus">$500.00</p>
+        </div>
+        <div>
+            <h4>Expenses</h4>
+            <p id="money-minus" class="money minus">-$5.00</p>
+        </div>
+    </div>
+    <h3>Add New Transactions</h3>
+    <form id="form">
+        <div class="form-control">
+            <label for="text">Rent</label>
+            <input type="text" id="text" placeholder="Enter text..." />
+        </div>
+        <div class="form-control">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter amount..." />
+        </div>
+        <button class="btn">Add Transaction</button>
+    </form>
 </body>
 </html>
