@@ -1,157 +1,77 @@
-:root{
+:root {
     --primary-color: #3498db;
     --income-color: #2ecc71;
-    --background-color: #ecf0f1;
     --expense-color: #e74c3c;
+    --background-color: #ecf0f1;
 }
 
-*{
-    box-sizing:border-box;
-}
-
-body{
-    background-color:var (--bg-color);
-    font-family:'Courier New', Courier, monospace;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    margin:0;
+    margin: 0;
 }
 
-.container{
-    width:380px;
-    background:#fff;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 15px rgba(0,0,0,0.1);
+.main-app {
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
-.balance-card{
+.balance-card {
     background: var(--primary-color);
-    color:white;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.inc-exp-container{
-    display:flex;
-    justify-content:space-between;
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 10px rgba(0,0,0,0.1);
-    margin-bottom:20px;
-}
-
-.inc-exp-container > div{
-    flex:1;
-    text-align:center;
-}
-
-.money{
-    font-size:1rem;
-    text-align:center;
-}
-
-.money.plus{color:var(--income-color);}
-
-.money.minus{color:var(--expense-color);}
-
-h3{
-    border-bottom:1px solid #bbb;
-    padding-bottom:10px;
-    margin:30px0 10px;
-}
-
-.list{
-    list-style-type:none;
-    padding:0;
-    margin-bottom:40px;
-    max-height:150px;
-    overflow-y:auto;
-}
-
-.list li{
-    background-color:#fff;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    color:#333;
-    display:flex;
-    justify-content:space-between;
-    padding:10px;
-    margin:10px 0;
-    border-radius:8px;
-}
-
-.list li.plus{
-    border-right:5px solid var(--income-color);
-}
-
-.list li.minus{
-    border-right:5px solid var(--expense-color);
-}
-
-input[type="text"], input[type="number"]{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #dedede;
-    border-radius:8px;
-}
-
-.btn{
-    cursor:pointer;
-    background-color:var(--primary-color);
-    color:#fff;
-    border:0;
-    display:block;
-    font-size:16px;
-    margin:10px 0 30px;
-    padding:12px;
-    width:100%;
-    border-radius:8px;
-    transition:transform 0.2s ease;
-}
-
-.btn-active{
-    transform:scale(0.98);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .inc-exp-container {
-    background-color:#fff;
-    box-shadow:0 1px 3px rgba(0,0,0,0,12), 0 1px 2px rgba(0,0,0,0,24);
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    margin:20px;
-    text-align:center;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
 }
 
-.inc-exp-container > div{
-    flex:1;
+.inc-exp-container > div:first-of-type { border-right: 1px solid #dedede; flex: 1; text-align: center; }
+.inc-exp-container > div:last-of-type { flex: 1; text-align: center; }
+
+.money { font-size: 1.2rem; font-weight: bold; }
+.money.plus { color: var(--income-color); }
+.money.minus { color: var(--expense-color); }
+
+.list { list-style-type: none; padding: 0; margin-bottom: 30px; max-height: 150px; overflow-y: auto; }
+.list li {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
 }
 
-.inc-exp-container > div:first-of-type{
-    border-right:1px solid #dedede;
-}
+.list li.plus { border-right: 5px solid var(--income-color); }
+.list li.minus { border-right: 5px solid var(--expense-color); }
 
-h4{
-    margin:0;
-    text-transform:uppercase;
-}
+.form-control input { width: 100%; padding: 10px; border: 1px solid #dedede; border-radius: 8px; }
 
-.money{
-    font-size:20px;
-    letter-spacing:1px;
-    margin:5px 0;
-}
-
-.money-plus{
-    color:#2ecc71;
-}
-
-.money-minus{
-    color:#c0392b;
+.add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 0;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px; 
+    border-radius: 8px;
+    cursor: pointer;
 }
